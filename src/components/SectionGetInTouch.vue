@@ -44,17 +44,17 @@
 </script>
 
 <template>
-  <div class="bg-gray-800 text-gray-300 p-6 rounded-lg shadow-lg">
+  <div class="bg-gray-200 dark:bg-gray-800 text-gray-300 p-6 rounded-lg shadow-lg">
     <form v-on:submit.prevent="handleSubmit" class="space-y-4">
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+        <label for="name" class="block text-sm font-medium text-gray-800 dark:text-gray-400 mb-1">Name</label>
         <div class="relative">
           <input
             id="name"
             v-model="form.name"
             type="text"
             required
-            class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"
+            class="w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-800 dark:text-white placeholder-gray-500"
             placeholder="Your Name"
           />
           <UserIcon class="absolute right-3 top-2.5 h-5 w-5 text-gray-500" />
@@ -62,14 +62,14 @@
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+        <label for="email" class="block text-sm font-medium text-gray-800 dark:text-gray-400 mb-1">Email</label>
         <div class="relative">
           <input
             id="email"
             v-model="form.email"
             type="email"
             required
-            class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"
+            class="w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-800 dark:text-white placeholder-gray-500"
             placeholder="your.email@example.com"
           />
           <MailIcon class="absolute right-3 top-2.5 h-5 w-5 text-gray-500" />
@@ -77,14 +77,14 @@
       </div>
 
       <div>
-        <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+        <label for="message" class="block text-sm font-medium text-gray-800 dark:text-gray-400 mb-1">Message</label>
         <div class="relative">
           <textarea
             id="message"
             v-model="form.message"
             required
             rows="4"
-            class="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500 resize-none"
+            class="w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-800 dark:text-white placeholder-gray-500 resize-none"
             placeholder="Your message here..."
           ></textarea>
           <MessageSquareIcon class="absolute right-3 top-2.5 h-5 w-5 text-gray-500" />
@@ -94,7 +94,7 @@
       <button
         type="submit"
         v-bind:disabled="isSubmitting"
-        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out flex items-center justify-center"
+        class="w-full bg-purple-500 hover:bg-purple-400 dark:bg-purple-600 dark:hover:bg-purple-700 text-gray-900 dark:text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out flex items-center justify-center"
       >
         <SendIcon v-if="!isSubmitting" class="h-5 w-5 mr-2" />
         <LoaderIcon v-else class="h-5 w-5 mr-2 animate-spin" />
@@ -106,7 +106,9 @@
       v-if="submitStatus"
       v-bind:class="[
         'mt-4 p-3 text-center rounded-md',
-        submitStatus.type === 'success' ? 'bg-green-800 text-green-200' : 'bg-red-800 text-red-200',
+        submitStatus.type === 'success'
+          ? 'bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-200'
+          : 'bg-red-200 text-red-800 dark:bg-red-800 dark:text-red-200',
       ]"
     >
       {{ submitStatus.message }}

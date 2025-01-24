@@ -49,7 +49,7 @@
     <!-- Theme Toggle Button -->
     <button
       v-on:click="toggleTheme"
-      class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+      class="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
       v-bind:aria-label="themeStore.isDark ? 'Switch to light mode' : 'Switch to dark mode'"
     >
       <Sun v-if="!themeStore.isDark" class="h-5 w-5 text-gray-800" />
@@ -60,7 +60,7 @@
     <div class="relative lang-dropdown">
       <button
         v-on:click="isLangOpen = !isLangOpen"
-        class="flex items-center gap-2 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+        class="flex items-center gap-2 p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
       >
         <Languages class="h-5 w-5 text-gray-800 dark:text-gray-200" />
         <span class="text-sm text-gray-800 dark:text-gray-200 whitespace-nowrap">{{
@@ -82,7 +82,7 @@
             v-for="lang in languageStore.languages"
             v-bind:key="lang.code"
             v-on:click="selectLanguage(lang.code)"
-            class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
             v-bind:class="{ 'bg-gray-50 dark:bg-gray-700': languageStore.currentLanguage.code === lang.code }"
           >
             {{ lang.name }}

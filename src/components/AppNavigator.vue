@@ -9,7 +9,7 @@
       <li v-for="section in sections" :key="section">
         <RouterLink
           v-bind:to="{ hash: `#${section.toLowerCase()}` }"
-          class="text-gray-400 hover:text-green-400 transition duration-300"
+          class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition duration-300"
         >
           {{ section }}
         </RouterLink>

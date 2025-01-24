@@ -7,9 +7,9 @@
 <template>
   <header class="mb-12">
     <div class="flex flex-row justify-between items-start">
-      <h1 class="text-4xl font-bold text-green-400 mb-2">{{ name }}</h1>
+      <h1 class="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">{{ name }}</h1>
       <HeaderButtonGroup />
     </div>
-    <p class="text-xl text-gray-500">{{ title }}</p>
+    <p class="text-xl text-gray-700 dark:text-gray-500">{{ title }}</p>
   </header>
 </template>

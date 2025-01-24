@@ -34,12 +34,12 @@
 <template>
   <div class="space-y-4">
     <div v-for="category in skillCategories" v-bind:key="category.name">
-      <h3 class="text-xl font-semibold text-blue-400 mb-2">{{ category.name }}</h3>
+      <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-400 mb-2">{{ category.name }}</h3>
       <div class="flex flex-wrap gap-2">
         <span
           v-for="skill in category.skills"
           v-bind:key="skill"
-          class="bg-gray-800 px-3 py-1 rounded-full text-green-400 hover:bg-gray-700 transition duration-300"
+          class="bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded-full text-green-600 dark:text-green-400 hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300"
         >
           {{ skill }}
         </span>

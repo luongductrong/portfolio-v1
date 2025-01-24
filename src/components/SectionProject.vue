@@ -35,24 +35,27 @@
     <div
       v-for="project in projects"
       :key="project.name"
-      class="bg-gray-800 p-4 rounded-lg hover:shadow-lg transition duration-300"
+      class="group bg-gray-200 dark:bg-gray-800 p-4 rounded-lg hover:shadow-lg dark:hover:bg-gray-700 transition duration-300"
     >
       <div class="flex justify-between items-center mb-2">
-        <h3 class="text-xl font-semibold text-blue-400">{{ project.name }}</h3>
+        <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-400">{{ project.name }}</h3>
         <a
           :href="project.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-400 hover:text-gray-50 transition duration-300"
+          class="text-blue-500 dark:text-blue-400 hover:text-gray-50 transition duration-300"
         >
           <GitHubIcon class="w-5 h-5" />
         </a>
       </div>
       <p class="mb-2">{{ project.description }}</p>
       <div class="flex flex-wrap gap-2">
-        <span v-for="tech in project.technologies" :key="tech" class="bg-gray-700 text-xs px-2 py-1 rounded">{{
-          tech
-        }}</span>
+        <span
+          v-for="tech in project.technologies"
+          :key="tech"
+          class="bg-gray-300 dark:bg-gray-700 dark:group-hover:bg-gray-800 text-xs px-2 py-1 rounded transition duration-300"
+          >{{ tech }}</span
+        >
       </div>
     </div>
   </div>
