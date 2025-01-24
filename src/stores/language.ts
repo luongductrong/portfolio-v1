@@ -31,6 +31,9 @@ export const useLanguageStore = defineStore('language', {
       const savedLang = localStorage.getItem('language');
       if (savedLang && this.languages.some((lang) => lang.code === savedLang)) {
         this.currentLang = savedLang;
+      } else {
+        this.currentLang = navigator.language.slice(0, 2) || 'en';
+        this.setLanguage(this.currentLang);
       }
     },
     // This is a placeholder for where you'd implement actual language changing logic
