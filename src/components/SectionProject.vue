@@ -43,7 +43,7 @@
           :href="project.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-500 dark:text-blue-400 hover:text-gray-50 transition duration-300"
+          class="pl-2 pb-2 text-blue-500 dark:text-blue-400 hover:text-gray-800 dark:hover:text-gray-50 transition duration-300"
         >
           <GitHubIcon class="w-5 h-5" />
         </a>

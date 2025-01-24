@@ -4,6 +4,6 @@
 
 <template>
   <footer class="text-center text-gray-500 mt-12">
-    <p>&copy; {{ currentYear }} Trong Luong Duc. All rights reserved.</p>
+    <p>&copy; {{ currentYear }} Made with ❤️ by Trong Luong Duc.</p>
   </footer>
 </template>
