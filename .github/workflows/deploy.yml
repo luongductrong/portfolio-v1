@@ -9,6 +9,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # Allow workflow to write to repository
+
     steps:
       # Step 1: Checkout code from branch main
       - name: Checkout code
