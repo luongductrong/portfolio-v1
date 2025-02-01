@@ -39,13 +39,8 @@
     >
       <div class="flex justify-between items-center mb-2">
         <h3 class="text-xl font-semibold text-blue-500 dark:text-blue-400">{{ project.name }}</h3>
-        <a
-          :href="project.github"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="pl-2 pb-2 text-blue-500 dark:text-blue-400 hover:text-gray-800 dark:hover:text-gray-50 transition duration-300"
-        >
-          <GitHubIcon class="w-5 h-5" />
+        <a :href="project.github" target="_blank" rel="noopener noreferrer" class="pl-2 pb-2">
+          <GitHubIcon class="w-5 h-5 fill-gray-800 dark:fill-gray-50 hover:fill-blue-500 dark:hover:fill-blue-400" />
         </a>
       </div>
       <p class="mb-2">{{ project.description }}</p>
